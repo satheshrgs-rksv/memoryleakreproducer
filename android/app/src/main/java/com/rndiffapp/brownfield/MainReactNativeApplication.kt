@@ -2,10 +2,11 @@ package com.rndiffapp.brownfield
 
 import android.app.Application
 import android.util.Log
+import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
-import com.facebook.react.PackageList
 
+import java.util.HashMap
 
 class MainReactNativeApplication : Application(), ReactApplication {
     override fun onCreate() {
@@ -16,10 +17,11 @@ class MainReactNativeApplication : Application(), ReactApplication {
         options["mainModuleName"] = "index"
 
         ReactNativeBrownfield.initialize(this, options)
-        ReactNativeBrownfield.shared.startReactNative { Log.d("TEST", "React Native Started") }
+        ReactNativeBrownfield.shared.startReactNative {
+            Log.d("TEST", "React Native Started")
+        }
     }
 
-    override fun getReactNativeHost(): ReactNativeHost {
-        return ReactNativeBrownfield.shared.reactNativeHost
-    }
+    override val reactNativeHost: ReactNativeHost
+        get() = ReactNativeBrownfield.shared.reactNativeHost
 }

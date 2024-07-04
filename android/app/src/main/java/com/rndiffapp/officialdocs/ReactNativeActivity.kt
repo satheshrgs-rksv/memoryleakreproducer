@@ -35,7 +35,6 @@ class ReactNativeActivity : Activity(), DefaultHardwareBackBtnHandler {
             .addPackages(packages)
             .setUseDeveloperSupport(BuildConfig.DEBUG)
             .setInitialLifecycleState(LifecycleState.RESUMED)
-            .setJavaScriptExecutorFactory(HermesExecutorFactory())
             .build()
         // The string here (e.g. "MyReactNativeApp") has to match
         // the string in AppRegistry.registerComponent() in index.js

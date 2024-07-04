@@ -1,11 +1,10 @@
-package com.rndiffapp
+package com.rndiffapp.brownfield
 
 import android.app.Application
 import android.util.Log
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.PackageList
-import com.rndiffapp.brownfield.ReactNativeBrownfield
 
 
 class MainReactNativeApplication : Application(), ReactApplication {

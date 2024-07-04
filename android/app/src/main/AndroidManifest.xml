@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!--        android:name=".bootstrapinbuilt.MainApplication"-->
     <application
-        android:name=".MainReactNativeApplication"
+        android:name=".brownfield.MainReactNativeApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,7 +31,12 @@
             android:exported="false" />
         <activity
             android:name=".officialdocs.ReactNativeActivity"
-            android:exported="false" />
+            android:exported="true" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>
